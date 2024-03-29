@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Learn about HTML positions</title>
+  </head>
+  <body>
+    <h1 id="title">HTML positions</h1>
+    <!--
+    // https://youtube.com/watch?v=jx5jmI0UlXU 
+    1. static: Default one.
+    2. relative : Same as static. But lets you add top, right, bottom, left. Makes it move relative to it's normal position
+    3. absolute: Removes from the flow and positions absolute wrt to the parent. Parent has to be relative or absolute for top, right, bottom, left to work. Else it considers the main html element as the  parent .
+    4. fixed : Fixed to a place. Doesn't give two shits about the parent. Always considers html element as the parent. Stays there when scrolled.
+    5. sticky : Relative ( when normal) + fixed ( when scrolled). The values for top, right, bottom, left become active when scrolled 
+    -->
+    <div class="container">
+      <!-- place box 1 using the absolute positioning to its parent container -->
+      <div class="box" id="box1">
+        <div class="__center-the-label">Box 1 is now absolutely positioned</div>
+      </div>
+      <div class="box" id="box2">
+        <div class="__center-the-label">
+          Box 2 is positioned using sticky and to see the real sticky comment
+          out the display: inline-block in box styles
+        </div>
+      </div>
+      <div class="box" id="box3">
+        <div class="__center-the-label">Box 3 postion</div>
+      </div>
+      <div class="box" id="box4">
+        <div class="__center-the-label">Box 4 position</div>
+      </div>
+      <div class="box" id="box5">
+        <div class="__center-the-label">Box 5 position</div>
+      </div>
+      <!-- positioning box 6 with relative positioning and placing it beside box 7 -->
+      <div class="box" id="box6">
+        <div class="__center-the-label">
+          Box 6 position is relatively positioned to its previous position
+        </div>
+      </div>
+      <div class="box" id="box7">
+        <div class="__center-the-label">Box 7 position</div>
+      </div>
+    </div>
+    <a href="table.html">➡️</a>
+  </body>
+</html>

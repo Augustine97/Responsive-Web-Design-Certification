@@ -1,0 +1,254 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --white: #fff;
+  --black: #333;
+  --chocolate: #d2691e;
+  --dark-blue: #0000ff;
+  --crimson-red: #ff0000;
+  --yolk: #ffff00;
+  --pale-green: #00ff00;
+  --light-pink: #ffc0cb;
+  --gradient-1: #ccffff;
+  --gradient-2: #ffcccc;
+  --scale-skew-header: #e5fdd1;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-size: 1.6rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+#title {
+  text-align: center;
+}
+/* anchor page --start-- */
+.para {
+  background-color: var(--chocolate);
+}
+#first-para {
+  border: 0.4rem solid var(--dark-blue);
+  padding: 1rem;
+  text-align: justify;
+}
+#second-para {
+  border: 0.4rem solid var(--crimson-red);
+  padding: 1rem;
+  text-align: justify;
+}
+#third-para {
+  border: 0.4rem solid var(--yolk);
+  padding: 1rem;
+  text-align: justify;
+}
+#fourth-para {
+  border: 0.4rem solid var(--pale-green);
+  padding: 1rem;
+  text-align: justify;
+}
+#fifth-para {
+  border: 0.4rem solid var(--light-pink);
+  padding: 1rem;
+  text-align: justify;
+}
+/* anchor page --end-- */
+a {
+  text-decoration: none;
+}
+/* pseuso -selectors for anchor tag */
+/* unvisited link */
+a:link {
+  color: var(--white);
+}
+/* visited link */
+a:visited {
+  color: var(--pale-green);
+}
+/* mouse over link */
+a:hover {
+  color: var(--light-pink);
+}
+/* selected link */
+a:active {
+  color: var(--dark-blue);
+}
+/* formatting page --start-- */
+.outer {
+  margin: 2rem 0;
+}
+.ele-badge {
+  color: var(--chocolate);
+  border: solid var(--white);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+/* formatting page --end-- */
+/* citation page --start-- */
+.citation li {
+  list-style-type: none;
+  margin: 2rem 0;
+}
+.citation li div {
+  color: var(--chocolate);
+}
+.citation li blockquote {
+  margin: 0.5rem;
+}
+/* citation page --end-- */
+/* position page --start-- */
+.container {
+  border: 1px solid var(--crimson-red);
+  margin: 0 auto;
+  height: 200rem;
+  position: relative;
+}
+.box {
+  width: 20vw;
+  height: 50vh;
+  margin: 2rem;
+  display: inline-block;
+  padding: 5rem;
+}
+#box1 {
+  border: 0.2rem solid saddlebrown;
+  position: absolute;
+  top: 100rem;
+}
+#box2 {
+  border: 0.2rem solid red;
+  position: sticky;
+  top: 0;
+}
+#box3 {
+  border: 0.2rem solid yellow;
+}
+#box4 {
+  border: 0.2rem solid green;
+}
+#box5 {
+  border: 0.2rem solid pink;
+}
+#box6 {
+  border: 0.2rem solid blueviolet;
+  position: relative;
+  top: 74vh;
+}
+#box7 {
+  border: 0.2rem solid indianred;
+}
+/* position page --end-- */
+/* table page --start-- */
+table {
+  margin: 0 auto;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 2rem;
+}
+tr:nth-child(even) {
+  color: var(--light-pink);
+}
+td:nth-child(odd) {
+  background-color: var(--chocolate);
+}
+/* table page --end-- */
+/* gradients --start-- */
+.gradient-container {
+  margin: 0 auto;
+  width: 80vw;
+  height: 60vh;
+  border: 1px solid var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.gradient {
+  display: inline-block;
+  width: 20vw;
+  height: 50vh;
+  border: 1px solid var(--chocolate);
+}
+.linear-gradient {
+  background: linear-gradient(35deg, var(--gradient-1), var(--gradient-2));
+}
+.repeating-linear-gradient {
+  background: repeating-linear-gradient(
+    90deg,
+    yellow 0vw,
+    green 5vw,
+    pink 10vw,
+    violet 15vw,
+    brown 20vw
+  );
+}
+.radial-gradient {
+  background: radial-gradient(#e66465, #9198e5);
+}
+/* gradients --start-- */
+/* Scale and skew --start-- */
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black);
+  background-color: var(--scale-skew-header);
+}
+header {
+  background-color: var(--gradient-2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+header::after {
+  content: " ";
+  background-color: var(--gradient-2);
+  position: absolute;
+  width: 100vw;
+  height: 20vh;
+  top: -4rem;
+  margin: 0;
+  left: 0;
+  z-index: -2;
+  transform: skewY(-1deg);
+}
+header > h1 {
+  position: static;
+  margin: 0 auto;
+}
+.balls-container {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 29rem 0 0 0;
+}
+.ball {
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(35deg, var(--gradient-1), var(--gradient-2));
+  border-radius: 50%;
+}
+.ball:hover {
+  transform: scale(2);
+}
+.triangle {
+  width: 15vw;
+  height: 20vh;
+  background: linear-gradient(35deg, var(--gradient-1), var(--gradient-2));
+}
+.triangle:hover {
+  transform: rotate(-90deg);
+}
+/* Scale and skew --end-- */
